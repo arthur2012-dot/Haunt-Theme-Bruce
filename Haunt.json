@@ -4,6 +4,7 @@
   "bgColor": "0000",
   "border": 0,
   "label": 1,
+  "boot_img": "boot.gif",
   "ledBright": 70,
   "ledColor": "960064",
   "ledEffect": 1,
