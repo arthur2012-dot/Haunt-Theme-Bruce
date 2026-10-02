@@ -1,40 +1,42 @@
 # Haunt Theme for Bruce Firmware
 
-**Super leve** · Gengar / Haunt palette · Otimizado para **CYD 2432S028** (240×320)
+**Super leve + boot otimizado** · Gengar palette · Otimizado para **CYD 2432S028**
 
-Tema de cores puro extraído do [Haunt Firmware](https://github.com/arthur2012-dot/Haunt) de Batista.  
-Sem imagens, sem GIF, sem assets pesados — só o JSON. Ideal para CYD e builds LITE.
+Tema extraído do [Haunt Firmware](https://github.com/arthur2012-dot/Haunt) de Batista.
+
+## Arquivos
+
+| Arquivo     | Tamanho   | Descrição                          |
+|-------------|-----------|------------------------------------|
+| `Haunt.json`| ~230 B    | Cores + config                     |
+| `boot.gif`  | **~10.5 KB** | Gengar animado, **sem texto**, 4 frames, 16 cores |
 
 ## Cores (RGB565)
 
-| Campo       | Valor  | Descrição              |
-|-------------|--------|------------------------|
-| priColor    | `e59f` | Lavanda / Gengar claro |
-| secColor    | `a418` | Roxo médio             |
-| bgColor     | `0000` | Preto puro             |
-| ledColor    | `960064` | Roxo LED (HEX)       |
-
-- `border: 0` → sem bordas extras
-- `label: 1` → labels ativados
-- LED com efeito suave
+| Campo       | Valor    | Descrição              |
+|-------------|----------|------------------------|
+| priColor    | `e59f`   | Lavanda / Gengar       |
+| secColor    | `a418`   | Roxo médio             |
+| bgColor     | `0000`   | Preto puro             |
+| ledColor    | `960064` | Roxo LED               |
 
 ## Instalação (CYD 2432S028)
 
-1. Copie a pasta `Haunt-Theme-Bruce` (ou só o arquivo `Haunt.json`) para a **raiz do LittleFS** ou **SD card**.
-2. No Bruce: **Config → UI Theme** → escolha o filesystem → selecione `Haunt.json`.
-3. Pronto.
+1. Baixe o ZIP ou os arquivos (`Haunt.json` + `boot.gif`).
+2. Coloque **os dois** na **raiz do LittleFS** (recomendado) ou SD.
+3. No Bruce: **Config → UI Theme** → selecione o filesystem → escolha `Haunt.json`.
+4. O `boot.gif` será usado automaticamente no boot.
 
-> Recomendado: LittleFS para evitar bugs de tema em alguns builds.
+## Otimizações do boot.gif
 
-## Por que super leve?
-
-- Zero PNGs / GIFs / boot images
-- Apenas 1 arquivo JSON (~250 bytes)
-- Compatível com qualquer resolução Bruce (incluindo 180px CYD)
-- Não consome memória extra de ícones
+- Removido **todo texto** (“Haunt firmware”, versão, Initializing…)
+- Reduzido para **4 frames** (animação leve do Gengar flutuando)
+- Apenas **16 cores**
+- 320×240 (compatível com CYD)
+- ~10.5 KB (de ~40 KB originais)
 
 ## Origem
 
-Baseado no firmware Haunt (Gengar-themed dark UI) criado para o mesmo CYD 2432S028.
+Sprites originais do Haunt + compressão máxima para Bruce/CYD.
 
 MIT · Batista / arthur2012-dot
